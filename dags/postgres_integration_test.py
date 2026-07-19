@@ -10,7 +10,7 @@ default_args = {
 with DAG(
     dag_id='postgres_blank_db_demo',
     default_args=default_args,
-    schedule=None,  # Manual trigger
+    schedule=None,
     catchup=False,
     tags=['postgres', 'demo'],
 ) as dag:

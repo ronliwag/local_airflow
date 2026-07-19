@@ -16,6 +16,16 @@ airflow:
       conn_port: 5432
       conn_extra:
         example_extra_field:
+  connections:
+    - conn_id: postgres_netflix
+      conn_type: postgres
+      conn_host: host.docker.internal
+      conn_schema: netflix
+      conn_login: postgres
+      conn_password: postgres
+      conn_port: 5432
+      conn_extra:
+        example_extra_field:
   pools:
     - pool_name:
       pool_slot:
