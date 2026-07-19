@@ -30,7 +30,7 @@ with DAG(
     check_null_titles_cleaned = SQLValueCheckOperator(
         task_id="check_null_titles_cleaned",
         conn_id="postgres_netflix",
-        pass_value=0, # The DAG will pass ONLY if the query returns 0
+        pass_value=0, 
         retries=3,
         retry_delay=timedelta(seconds=5),
         sql="""
@@ -56,7 +56,7 @@ with DAG(
     check_duplicates_cleaned = SQLValueCheckOperator(
     task_id="check_duplicate_shows_cleaned",
         conn_id="postgres_netflix",
-        pass_value=0, # The DAG will pass ONLY if the query returns 0
+        pass_value=0, 
         retries=3,
         retry_delay=timedelta(seconds=5),
         sql="""
